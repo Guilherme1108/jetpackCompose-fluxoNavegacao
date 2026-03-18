@@ -17,9 +17,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
 
 @Composable
-fun MenuScrreen() {
+fun MenuScrreen(navController: NavController) {
     Box(
         modifier = Modifier.fillMaxSize()
             .background(Color(0xFF2C4EC7))
@@ -39,8 +40,11 @@ fun MenuScrreen() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+
             Button(
-                onClick = { /* TODO */ },
+                onClick = {
+                    navController.navigate("perfil/Guilherme/17")
+                },
                 colors = ButtonDefaults.buttonColors(
                     Color.White
                 ),
@@ -55,7 +59,9 @@ fun MenuScrreen() {
             }
 
             Button(
-                onClick = { /* TODO */ },
+                onClick = {
+                    navController.navigate("pedidos?numeroPedido=1234")
+                },
                 colors = ButtonDefaults.buttonColors(
                     Color.White
                 ),
@@ -71,7 +77,9 @@ fun MenuScrreen() {
             }
 
             Button(
-                onClick = { /* TODO */ },
+                onClick = {
+                    navController.navigate("login")
+                },
                 colors = ButtonDefaults.buttonColors(
                     Color.White
                 ),
